@@ -88,21 +88,21 @@ OAuth10Credentials OAuth10Credentials::fromJSON(const ofJson& json)
 {
     OAuth10Credentials credentials;
 
-    auto iter = json.cbegin();
-    while (iter != json.cend())
-    {
-        const auto& key = iter.key();
-        const auto& value = iter.value();
+    //auto iter = json.cbegin();
+    //while (iter != json.cend())
+    //{
+    //    const auto& key = iter.key();
+    //    const auto& value = iter.value();
 
-        if (key == "consumerKey") credentials._consumerKey = value;
-        else if (key == "consumerSecret" || key == "consumer_secret") credentials._consumerSecret = value;
-        else if (key == "accessToken" || key == "access_token") credentials._accessToken = value;
-        else if (key == "accessTokenSecret" || key == "access_token_secret") credentials._accessTokenSecret = value;
-        else if (key == "owner") credentials._owner = value;
-        else if (key == "ownerId" || key == "owner_id" ) credentials._ownerId = value;
-        else ofLogWarning("Credentials::fromJSON") << "Unknown key: " << key << std::endl << value.dump(4);
-        ++iter;
-    }
+    //    if (key == "consumerKey") credentials._consumerKey = value;
+    //    else if (key == "consumerSecret" || key == "consumer_secret") credentials._consumerSecret = value;
+    //    else if (key == "accessToken" || key == "access_token") credentials._accessToken = value;
+    //    else if (key == "accessTokenSecret" || key == "access_token_secret") credentials._accessTokenSecret = value;
+    //    else if (key == "owner") credentials._owner = value;
+    //    else if (key == "ownerId" || key == "owner_id" ) credentials._ownerId = value;
+    //    else ofLogWarning("Credentials::fromJSON") << "Unknown key: " << key << std::endl << value.dump(4);
+    //    ++iter;
+    //}
 
     return credentials;
 }
